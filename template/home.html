@@ -3,9 +3,9 @@
         <title>3C Portal</title>
     </head>
     <body>
-        <form action="#submit">
+        <form action="{{ url_for('predict')}}" method="post" enctype="multipart/form-data">
             <label for="Bank">Select Bank:</label>
-            <select name="cars" id="cars">
+            <select name="banks" id="banks">
                 <option value="Yes Bank">Yes Bank</option>
                 <option value="AU SFB">AU SFB</option>
                 <option value="HDFC">HDFC Bank</option>
@@ -14,7 +14,7 @@
               <br>
                 <br>
             <label for="inputMIS"> MIS Report: </label>
-            <input title="inputMIS" type="file"/>
+            <input title="inputMIS" type="file" name="file" accept=".xlsx"/>
             <br>
             <br>
 
